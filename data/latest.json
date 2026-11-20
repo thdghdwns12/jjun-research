@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-20T00:11:39.773827+00:00",
+  "as_of": "2026-11-19",
+  "cio": {
+    "status": "partial",
+    "summary": "supply 에이전트가 데이터 부족으로 실패해 최종 투자판단을 보류합니다.",
+    "missing_data": [
+      "cosmetics_exports",
+      "dram_prices",
+      "krx_investor_flow",
+      "market_universe_history",
+      "semiconductor_exports",
+      "shipping_rates"
+    ]
+  },
+  "ideas": [
+    {
+      "company": "셀트리온",
+      "stock_code": "068270",
+      "close": 215000,
+      "return_20d_pct": 10.396294390118378,
+      "return_60d_pct": 11.544461778471149,
+      "volatility_20d_pct": 40.65355865008872,
+      "distance_to_52w_high_pct": -9.366199177680478,
+      "price_to_book": 2.8572,
+      "official_change_pct": 3.61,
+      "market_cap": 49907775635000,
+      "research_priority": "A - 즉시 리서치",
+      "why_now": "20일 상승, 60일 상승, 최근 뉴스 12건, 영업이익 전년비 증가, DART 분기보고서 (2026.09)",
+      "first_rejection": "20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락",
+      "investable_if": "공시 원문에서 이익 개선의 질을 확인하고, KRX 20일 이력과 투자주체 수급이 같은 방향을 지지할 때",
+      "kill_conditions": "가격 모멘텀 반전 또는 다음 공식 실적에서 이익 개선 근거 소멸",
+      "latest_disclosure": "분기보고서 (2026.09)",
+      "latest_disclosure_date": "20261116"
+    },
+    {
+      "company": "카카오",
+      "stock_code": "035720",
+      "close": 31900,
+      "return_20d_pct": 5.436573311367376,
+      "return_60d_pct": -10.61452513966481,
+      "volatility_20d_pct": 42.47525329371785,
+      "distance_to_52w_high_pct": -49.84326018808778,
+      "price_to_book": 0.9423,
+      "official_change_pct": 0.31,
+      "market_cap": 14131716269000,
+      "research_priority": "B - 관찰",
+      "why_now": "20일 상승, 최근 뉴스 15건, 영업이익 전년비 증가, DART 주식등의대량보유상황보고서(약식)",
+      "first_rejection": "20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락",
+      "investable_if": "공시 원문에서 이익 개선의 질을 확인하고, KRX 20일 이력과 투자주체 수급이 같은 방향을 지지할 때",
+      "kill_conditions": "가격 모멘텀 반전 또는 다음 공식 실적에서 이익 개선 근거 소멸",
+      "latest_disclosure": "주식등의대량보유상황보고서(약식)",
+      "latest_disclosure_date": "20261119"
+    },
+    {
+      "company": "SK하이닉스",
+      "stock_code": "000660",
+      "close": 1183000,
+      "return_20d_pct": -4.660670482420281,
+      "return_60d_pct": -32.60115606936416,
+      "volatility_20d_pct": 89.34000344954667,
+      "distance_to_52w_high_pct": -60.054813292223365,
+      "price_to_book": 2.7052,
+      "official_change_pct": 3.41,
+      "market_cap": 836143327019000,
+      "research_priority": "C - 화면 신호만",
+      "why_now": "최근 뉴스 40건, 영업이익 전년비 증가, DART 분기보고서 (2026.09)",
+      "first_rejection": "20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락",
+      "investable_if": "공시 원문에서 이익 개선의 질을 확인하고, KRX 20일 이력과 투자주체 수급이 같은 방향을 지지할 때",
+      "kill_conditions": "가격 모멘텀 반전 또는 다음 공식 실적에서 이익 개선 근거 소멸",
+      "latest_disclosure": "분기보고서 (2026.09)",
+      "latest_disclosure_date": "20261116"
+    },
+    {
+      "company": "포스코홀딩스",
+      "stock_code": "005490",
+      "close": 259500,
+      "return_20d_pct": -9.26573426573427,
+      "return_60d_pct": -16.290322580645167,
+      "volatility_20d_pct": 42.565130970201636,
+      "distance_to_52w_high_pct": -51.495327102803735,
+      "price_to_book": 0.3188,
+      "official_change_pct": -0.76,
+      "market_cap": 20563176256500,
+      "research_priority": "C - 화면 신호만",
+      "why_now": "최근 뉴스 4건, 영업이익 전년비 증가, DART 풍문또는보도에대한해명(미확정)(자회사의 주요경영사항)",
+      "first_rejection": "20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락",
+      "investable_if": "공시 원문에서 이익 개선의 질을 확인하고, KRX 20일 이력과 투자주체 수급이 같은 방향을 지지할 때",
+      "kill_conditions": "가격 모멘텀 반전 또는 다음 공식 실적에서 이익 개선 근거 소멸",
+      "latest_disclosure": "풍문또는보도에대한해명(미확정)(자회사의 주요경영사항)",
+      "latest_disclosure_date": "20261119"
+    },
+    {
+      "company": "삼성전자",
+      "stock_code": "005930",
+      "close": 196900,
+      "return_20d_pct": -9.463869463869468,
+      "return_60d_pct": -31.01243339253996,
+      "volatility_20d_pct": 63.04949610542667,
+      "distance_to_52w_high_pct": -46.42758620689656,
+      "price_to_book": 1.8745,
+      "official_change_pct": 1.13,
+      "market_cap": 1151132257915200,
+      "research_priority": "C - 화면 신호만",
+      "why_now": "최근 뉴스 51건, 영업이익 전년비 증가, DART 임원ㆍ주요주주특정증권등소유상황보고서",
+      "first_rejection": "20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락",
+      "investable_if": "공시 원문에서 이익 개선의 질을 확인하고, KRX 20일 이력과 투자주체 수급이 같은 방향을 지지할 때",
+      "kill_conditions": "가격 모멘텀 반전 또는 다음 공식 실적에서 이익 개선 근거 소멸",
+      "latest_disclosure": "임원ㆍ주요주주특정증권등소유상황보고서",
+      "latest_disclosure_date": "20261118"
+    }
+  ],
+  "indicators": [
+    {
+      "indicator": "BRENT",
+      "date": "2026-11-11",
+      "value": 92.14,
+      "unit": "USD/barrel"
+    },
+    {
+      "indicator": "WTI",
+      "date": "2026-11-11",
+      "value": 89.62,
+      "unit": "USD/barrel"
+    },
+    {
+      "indicator": "DEXKOUS",
+      "date": "2026-11-13",
+      "value": 1336.58,
+      "unit": "KRW/USD"
+    },
+    {
+      "indicator": "DGS10",
+      "date": "2026-11-17",
+      "value": 5.1,
+      "unit": "%"
+    },
+    {
+      "indicator": "DGS2",
+      "date": "2026-11-17",
+      "value": 4.8,
+      "unit": "%"
+    },
+    {
+      "indicator": "PCOPPUSDM",
+      "date": "2026-09-01",
+      "value": 14473.05590909091,
+      "unit": "USD/ton"
+    },
+    {
+      "indicator": "SOFR",
+      "date": "2026-11-17",
+      "value": 3.92,
+      "unit": "%"
+    },
+    {
+      "indicator": "T10Y2Y",
+      "date": "2026-11-18",
+      "value": 0.27,
+      "unit": "%p"
+    },
+    {
+      "indicator": "VIXCLS",
+      "date": "2026-11-17",
+      "value": 25.46,
+      "unit": "index"
+    }
+  ],
+  "disclosures": [
+    {
+      "corp_name": "카카오",
+      "report_name": "주식등의대량보유상황보고서(약식)",
+      "received_date": "20261119",
+      "important_keyword": null
+    },
+    {
+      "corp_name": "POSCO홀딩스",
+      "report_name": "풍문또는보도에대한해명(미확정)(자회사의 주요경영사항)              ",
+      "received_date": "20261119",
+      "important_keyword": null
+    },
+    {
+      "corp_name": "삼성전자",
+      "report_name": "임원ㆍ주요주주특정증권등소유상황보고서",
+      "received_date": "20261118",
+      "important_keyword": null
+    },
+    {
+      "corp_name": "삼성전자",
+      "report_name": "분기보고서 (2026.09)",
+      "received_date": "20261116",
+      "important_keyword": null
+    },
+    {
+      "corp_name": "SK하이닉스",
+      "report_name": "분기보고서 (2026.09)",
+      "received_date": "20261116",
+      "important_keyword": null
+    },
+    {
+      "corp_name": "두산에너빌리티",
+      "report_name": "[기재정정]단일판매ㆍ공급계약체결              ",
+      "received_date": "20261116",
+      "important_keyword": "공급계약"
+    },
+    {
+      "corp_name": "현대자동차",
+      "report_name": "분기보고서 (2026.09)",
+      "received_date": "20261116",
+      "important_keyword": null
+    },
+    {
+      "corp_name": "현대자동차",
+      "report_name": "임원ㆍ주요주주특정증권등소유상황보고서",
+      "received_date": "20261116",
+      "important_keyword": null
+    }
+  ],
+  "agents": [
+    {
+      "agent": "cio",
+      "status": "partial",
+      "as_of": null,
+      "summary": "supply 에이전트가 데이터 부족으로 실패해 최종 투자판단을 보류합니다.",
+      "missing_data": [
+        "cosmetics_exports",
+        "dram_prices",
+        "krx_investor_flow",
+        "market_universe_history",
+        "semiconductor_exports",
+        "shipping_rates"
+      ]
+    },
+    {
+      "agent": "supply",
+      "status": "failed",
+      "as_of": null,
+      "summary": "KRX 세부 투자주체 데이터가 없어 수급 의견을 생성하지 않았습니다.",
+      "missing_data": [
+        "krx_investor_flow"
+      ]
+    },
+    {
+      "agent": "industry",
+      "status": "partial",
+      "as_of": "2026-11-18",
+      "summary": "원유(DataHub EIA 미러)·금리·환율·구리·변동성 지표를 확인했지만 수출·운임·반도체 가격 데이터가 없어 산업 판단은 부분 결과입니다.",
+      "missing_data": [
+        "semiconductor_exports",
+        "cosmetics_exports",
+        "shipping_rates",
+        "dram_prices"
+      ]
+    },
+    {
+      "agent": "market_highs",
+      "status": "pass",
+      "as_of": "2026-11-19",
+      "summary": "17개 지수·종목의 최신 가격과 52주 신고가 근접 여부를 계산했습니다.",
+      "missing_data": []
+    },
+    {
+      "agent": "news_disclosure",
+      "status": "pass",
+      "as_of": "20261119",
+      "summary": "관심종목 공시·뉴스 70건을 확인했습니다. 현재는 제목 기반 분류입니다.",
+      "missing_data": []
+    },
+    {
+      "agent": "company_analysis",
+      "status": "pass",
+      "as_of": "2026-11-19",
+      "summary": "관심기업 12개의 가격 지표, KRX 공식 종가 12건, DART 주요 재무계정 72건, 공식 원본 결합 밸류에이션 12건을 분석했습니다.",
+      "missing_data": []
+    },
+    {
+      "agent": "stock_ideas",
+      "status": "partial",
+      "as_of": "2026-11-19",
+      "summary": "관심종목 후보 5개와 KRX 전 종목 20일 모멘텀 후보 0개를 선별했습니다. 매수 추천은 아닙니다.",
+      "missing_data": [
+        "krx_investor_flow",
+        "market_universe_history"
+      ]
+    }
+  ]
+}
