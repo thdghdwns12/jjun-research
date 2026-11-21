@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-20T06:21:18.126720+00:00",
+  "generated_at": "2026-11-21T09:32:15.237342+00:00",
   "as_of": "2026-11-20",
   "cio": {
     "status": "partial",
@@ -18,16 +18,16 @@
     {
       "company": "셀트리온",
       "stock_code": "068270",
-      "close": 215000,
+      "close": 213000,
       "return_20d_pct": 9.567901234567898,
       "return_60d_pct": 9.7938144329897,
       "volatility_20d_pct": 41.16194033054235,
       "distance_to_52w_high_pct": -10.000001980633755,
-      "price_to_book": 2.8572,
-      "official_change_pct": 3.61,
-      "market_cap": 49907775635000,
+      "price_to_book": 2.8306,
+      "official_change_pct": -0.93,
+      "market_cap": 49443517257000,
       "research_priority": "A - 즉시 리서치",
-      "why_now": "20일 상승, 60일 상승, 최근 뉴스 3건, 영업이익 전년비 증가, DART 분기보고서 (2026.09)",
+      "why_now": "20일 상승, 60일 상승, 최근 뉴스 7건, 영업이익 전년비 증가, DART 분기보고서 (2026.09)",
       "first_rejection": "20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락",
       "investable_if": "공시 원문에서 이익 개선의 질을 확인하고, KRX 20일 이력과 투자주체 수급이 같은 방향을 지지할 때",
       "kill_conditions": "가격 모멘텀 반전 또는 다음 공식 실적에서 이익 개선 근거 소멸",
@@ -37,16 +37,16 @@
     {
       "company": "카카오",
       "stock_code": "035720",
-      "close": 31900,
+      "close": 31000,
       "return_20d_pct": 3.5058430717863187,
       "return_60d_pct": -13.407821229050276,
       "volatility_20d_pct": 43.47916595799038,
       "distance_to_52w_high_pct": -51.410658307210035,
-      "price_to_book": 0.9423,
-      "official_change_pct": 0.31,
-      "market_cap": 14131716269000,
+      "price_to_book": 0.9157,
+      "official_change_pct": -2.82,
+      "market_cap": 13733015810000,
       "research_priority": "B - 관찰",
-      "why_now": "20일 상승, 최근 뉴스 94건, 영업이익 전년비 증가, DART 주식등의대량보유상황보고서(약식)",
+      "why_now": "20일 상승, 최근 뉴스 23건, 영업이익 전년비 증가, DART 주식등의대량보유상황보고서(약식)",
       "first_rejection": "20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락",
       "investable_if": "공시 원문에서 이익 개선의 질을 확인하고, KRX 20일 이력과 투자주체 수급이 같은 방향을 지지할 때",
       "kill_conditions": "가격 모멘텀 반전 또는 다음 공식 실적에서 이익 개선 근거 소멸",
@@ -54,37 +54,18 @@
       "latest_disclosure_date": "20261119"
     },
     {
-      "company": "포스코홀딩스",
-      "stock_code": "005490",
-      "close": 259500,
-      "return_20d_pct": -8.52994555353902,
-      "return_60d_pct": -23.053435114503817,
-      "volatility_20d_pct": 41.90062304863261,
-      "distance_to_52w_high_pct": -52.89719626168225,
-      "price_to_book": 0.3188,
-      "official_change_pct": -0.76,
-      "market_cap": 20563176256500,
-      "research_priority": "C - 화면 신호만",
-      "why_now": "최근 뉴스 1건, 영업이익 전년비 증가, DART 풍문또는보도에대한해명(미확정)(자회사의 주요경영사항)",
-      "first_rejection": "20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락",
-      "investable_if": "공시 원문에서 이익 개선의 질을 확인하고, KRX 20일 이력과 투자주체 수급이 같은 방향을 지지할 때",
-      "kill_conditions": "가격 모멘텀 반전 또는 다음 공식 실적에서 이익 개선 근거 소멸",
-      "latest_disclosure": "풍문또는보도에대한해명(미확정)(자회사의 주요경영사항)",
-      "latest_disclosure_date": "20261119"
-    },
-    {
       "company": "SK하이닉스",
       "stock_code": "000660",
-      "close": 1183000,
-      "return_20d_pct": -13.860610806577922,
-      "return_60d_pct": -34.17115499700778,
-      "volatility_20d_pct": 91.51040451254538,
-      "distance_to_52w_high_pct": -62.31586159643714,
-      "price_to_book": 2.7052,
-      "official_change_pct": 3.41,
-      "market_cap": 836143327019000,
+      "close": 1113000,
+      "return_20d_pct": -12.84259984338293,
+      "return_60d_pct": -33.39317773788151,
+      "volatility_20d_pct": 90.610452776255,
+      "distance_to_52w_high_pct": -61.870503597122294,
+      "price_to_book": 2.5451,
+      "official_change_pct": -5.92,
+      "market_cap": 786667390509000,
       "research_priority": "C - 화면 신호만",
-      "why_now": "최근 뉴스 27건, 영업이익 전년비 증가, DART 분기보고서 (2026.09)",
+      "why_now": "최근 뉴스 67건, 영업이익 전년비 증가, DART 분기보고서 (2026.09)",
       "first_rejection": "20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락",
       "investable_if": "공시 원문에서 이익 개선의 질을 확인하고, KRX 20일 이력과 투자주체 수급이 같은 방향을 지지할 때",
       "kill_conditions": "가격 모멘텀 반전 또는 다음 공식 실적에서 이익 개선 근거 소멸",
@@ -94,21 +75,40 @@
     {
       "company": "삼성전자",
       "stock_code": "005930",
-      "close": 196900,
-      "return_20d_pct": -15.313225058004642,
-      "return_60d_pct": -28.988326848249024,
-      "volatility_20d_pct": 67.59228321926511,
-      "distance_to_52w_high_pct": -49.6551724137931,
-      "price_to_book": 1.8745,
-      "official_change_pct": 1.13,
-      "market_cap": 1151132257915200,
+      "close": 183100,
+      "return_20d_pct": -15.034802784222734,
+      "return_60d_pct": -28.75486381322957,
+      "volatility_20d_pct": 67.22593863248215,
+      "distance_to_52w_high_pct": -49.48965517241379,
+      "price_to_book": 1.7431,
+      "official_change_pct": -7.01,
+      "market_cap": 1070453613124800,
       "research_priority": "C - 화면 신호만",
-      "why_now": "최근 뉴스 47건, 영업이익 전년비 증가, DART 임원ㆍ주요주주특정증권등소유상황보고서",
+      "why_now": "최근 뉴스 26건, 영업이익 전년비 증가, DART 임원ㆍ주요주주특정증권등소유상황보고서",
       "first_rejection": "20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락",
       "investable_if": "공시 원문에서 이익 개선의 질을 확인하고, KRX 20일 이력과 투자주체 수급이 같은 방향을 지지할 때",
       "kill_conditions": "가격 모멘텀 반전 또는 다음 공식 실적에서 이익 개선 근거 소멸",
       "latest_disclosure": "임원ㆍ주요주주특정증권등소유상황보고서",
       "latest_disclosure_date": "20261118"
+    },
+    {
+      "company": "한화에어로스페이스",
+      "stock_code": "012450",
+      "close": 605000,
+      "return_20d_pct": -23.611111111111114,
+      "return_60d_pct": -45.24886877828054,
+      "volatility_20d_pct": 54.97368838186454,
+      "distance_to_52w_high_pct": -60.63760572543917,
+      "price_to_book": 1.6241,
+      "official_change_pct": -4.12,
+      "market_cap": 31195857605000,
+      "research_priority": "C - 화면 신호만",
+      "why_now": "최근 뉴스 6건, 영업이익 전년비 증가, DART 분기보고서 (2026.09)",
+      "first_rejection": "20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락",
+      "investable_if": "공시 원문에서 이익 개선의 질을 확인하고, KRX 20일 이력과 투자주체 수급이 같은 방향을 지지할 때",
+      "kill_conditions": "가격 모멘텀 반전 또는 다음 공식 실적에서 이익 개선 근거 소멸",
+      "latest_disclosure": "분기보고서 (2026.09)",
+      "latest_disclosure_date": "20261112"
     }
   ],
   "indicators": [
@@ -132,14 +132,14 @@
     },
     {
       "indicator": "DGS10",
-      "date": "2026-11-18",
-      "value": 5.07,
+      "date": "2026-11-19",
+      "value": 5.04,
       "unit": "%"
     },
     {
       "indicator": "DGS2",
-      "date": "2026-11-18",
-      "value": 4.8,
+      "date": "2026-11-19",
+      "value": 4.76,
       "unit": "%"
     },
     {
@@ -150,20 +150,20 @@
     },
     {
       "indicator": "SOFR",
-      "date": "2026-11-18",
-      "value": 3.9,
+      "date": "2026-11-19",
+      "value": 3.91,
       "unit": "%"
     },
     {
       "indicator": "T10Y2Y",
-      "date": "2026-11-19",
-      "value": 0.28,
+      "date": "2026-11-20",
+      "value": 0.29,
       "unit": "%p"
     },
     {
       "indicator": "VIXCLS",
-      "date": "2026-11-18",
-      "value": 24.56,
+      "date": "2026-11-19",
+      "value": 28.44,
       "unit": "index"
     }
   ],
@@ -218,12 +218,36 @@
       "important_keyword": null
     }
   ],
+  "investor_flows": [],
   "agents": [
     {
       "agent": "cio",
       "status": "partial",
       "as_of": null,
       "summary": "supply 에이전트가 데이터 부족으로 실패해 최종 투자판단을 보류합니다.",
+      "verdict": "supply 에이전트가 데이터 부족으로 실패해 최종 투자판단을 보류합니다.",
+      "what_changed": [
+        "supply: 원본이 들어오기 전에는 판단하지 않습니다.",
+        "industry: 품목별 수출과 거시 환경을 함께 보되, 수출 원본이 없으면 업종 방향을 확정하지 않습니다.",
+        "market_highs: 신고가 근접은 후보 탐색 신호일 뿐, 수급·실적 확인 전에는 추격하지 않습니다.",
+        "news_disclosure: 뉴스 개수가 아니라 공시 원문에서 이익·현금흐름·지배구조 변화가 있는지 확인합니다.",
+        "company_analysis: 가격·실적·밸류에이션을 한 화면에서 비교하되, 빈 값은 추정하지 않습니다.",
+        "stock_ideas: 오늘의 리서치 순서는 셀트리온 → 카카오 → SK하이닉스입니다."
+      ],
+      "confirm": [
+        "수급·공시·실적·가격이 같은 방향인 후보만 승격"
+      ],
+      "kill": [
+        "필수 원본 누락 또는 에이전트 간 기준일 상충 시 최종 판단 보류"
+      ],
+      "action_required": [
+        "cosmetics_exports: 확보 방법을 데이터 요청 카드에서 확인",
+        "dram_prices: 확보 방법을 데이터 요청 카드에서 확인",
+        "krx_investor_flow: 확보 방법을 데이터 요청 카드에서 확인",
+        "market_universe_history: 확보 방법을 데이터 요청 카드에서 확인",
+        "semiconductor_exports: 확보 방법을 데이터 요청 카드에서 확인",
+        "shipping_rates: 확보 방법을 데이터 요청 카드에서 확인"
+      ],
       "missing_data": [
         "cosmetics_exports",
         "dram_prices",
@@ -238,6 +262,13 @@
       "status": "failed",
       "as_of": null,
       "summary": "KRX 세부 투자주체 데이터가 없어 수급 의견을 생성하지 않았습니다.",
+      "verdict": "원본이 들어오기 전에는 판단하지 않습니다.",
+      "what_changed": [],
+      "confirm": [],
+      "kill": [],
+      "action_required": [
+        "krx_investor_flow: 원본 연결 또는 내보내기 파일 필요"
+      ],
       "missing_data": [
         "krx_investor_flow"
       ]
@@ -245,8 +276,20 @@
     {
       "agent": "industry",
       "status": "partial",
-      "as_of": "2026-11-19",
+      "as_of": "2026-11-20",
       "summary": "원유(DataHub EIA 미러)·금리·환율·구리·변동성 지표를 확인했지만 수출·운임·반도체 가격 데이터가 없어 산업 판단은 부분 결과입니다.",
+      "verdict": "품목별 수출과 거시 환경을 함께 보되, 수출 원본이 없으면 업종 방향을 확정하지 않습니다.",
+      "what_changed": [],
+      "confirm": [
+        "금액 증가가 중량 증가인지 단가 상승인지 분해",
+        "전월·전년 동월과 같은 기준으로 비교"
+      ],
+      "kill": [
+        "반도체 전체 합계 하나로 DRAM·NAND·기판·MLCC를 같은 사이클로 해석하지 않음"
+      ],
+      "action_required": [
+        "TRASS 품목통계 CSV/XLSX 1회 전달"
+      ],
       "missing_data": [
         "semiconductor_exports",
         "cosmetics_exports",
@@ -259,6 +302,15 @@
       "status": "pass",
       "as_of": "2026-11-20",
       "summary": "17개 지수·종목의 최신 가격과 52주 신고가 근접 여부를 계산했습니다.",
+      "verdict": "신고가 근접은 후보 탐색 신호일 뿐, 수급·실적 확인 전에는 추격하지 않습니다.",
+      "what_changed": [],
+      "confirm": [
+        "거래대금 증가와 종가 돌파가 동시에 나타나는지 확인"
+      ],
+      "kill": [
+        "가격만 오른 채 거래대금과 실적 근거가 없으면 후보에서 제외"
+      ],
+      "action_required": [],
       "missing_data": []
     },
     {
@@ -266,6 +318,21 @@
       "status": "pass",
       "as_of": "20261119",
       "summary": "관심종목 공시·뉴스 70건을 확인했습니다. 현재는 제목 기반 분류입니다.",
+      "verdict": "뉴스 개수가 아니라 공시 원문에서 이익·현금흐름·지배구조 변화가 있는지 확인합니다.",
+      "what_changed": [
+        "LG에너지솔루션: 기업가치제고계획예고(안내공시)              ",
+        "카카오: 주식등의대량보유상황보고서(약식)",
+        "POSCO홀딩스: 풍문또는보도에대한해명(미확정)(자회사의 주요경영사항)              ",
+        "삼성전자: 임원ㆍ주요주주특정증권등소유상황보고서",
+        "삼성전자: 분기보고서 (2026.09)"
+      ],
+      "confirm": [
+        "상위 후보 관련 공시 원문에서 금액·기간·상대방·실적 영향을 확인"
+      ],
+      "kill": [
+        "기사 제목만 있고 공식 공시나 수치 근거가 없으면 촉매로 인정하지 않음"
+      ],
+      "action_required": [],
       "missing_data": []
     },
     {
@@ -273,6 +340,21 @@
       "status": "pass",
       "as_of": "2026-11-20",
       "summary": "관심기업 12개의 가격 지표, KRX 공식 종가 12건, DART 주요 재무계정 72건, 공식 원본 결합 밸류에이션 12건을 분석했습니다.",
+      "verdict": "가격·실적·밸류에이션을 한 화면에서 비교하되, 빈 값은 추정하지 않습니다.",
+      "what_changed": [
+        "SK하이닉스 · 20일 -12.8% · 52주 고점 대비 -61.9%",
+        "현대차 · 20일 -13.7% · 52주 고점 대비 -66.0%",
+        "포스코홀딩스 · 20일 -8.5% · 52주 고점 대비 -52.9%",
+        "삼성전자 · 20일 -15.0% · 52주 고점 대비 -49.5%",
+        "S-Oil · 20일 -26.5% · 52주 고점 대비 -43.0%"
+      ],
+      "confirm": [
+        "실적 개선이 일회성인지 본업 성장인지 공시 원문에서 확인"
+      ],
+      "kill": [
+        "중간 누계 실적의 임의 연환산 또는 비공식 시세만으로 밸류에이션 판단 금지"
+      ],
+      "action_required": [],
       "missing_data": []
     },
     {
@@ -280,6 +362,22 @@
       "status": "partial",
       "as_of": "2026-11-20",
       "summary": "관심종목 후보 5개와 KRX 전 종목 20일 모멘텀 후보 0개를 선별했습니다. 매수 추천은 아닙니다.",
+      "verdict": "오늘의 리서치 순서는 셀트리온 → 카카오 → SK하이닉스입니다.",
+      "what_changed": [
+        "셀트리온 · WHY 20일 상승, 60일 상승, 최근 뉴스 7건, 영업이익 전년비 증가, DART 분기보고서 (2026.09) · KILL 20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락",
+        "카카오 · WHY 20일 상승, 최근 뉴스 23건, 영업이익 전년비 증가, DART 주식등의대량보유상황보고서(약식) · KILL 20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락",
+        "SK하이닉스 · WHY 최근 뉴스 67건, 영업이익 전년비 증가, DART 분기보고서 (2026.09) · KILL 20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락"
+      ],
+      "confirm": [
+        "수급·공시·실적·가격 중 최소 세 가지가 같은 방향인지 확인"
+      ],
+      "kill": [
+        "뉴스 건수나 단기 상승률만으로 후보를 승격하지 않음"
+      ],
+      "action_required": [
+        "krx_investor_flow: 후보 승격 전에 보강 필요",
+        "market_universe_history: 후보 승격 전에 보강 필요"
+      ],
       "missing_data": [
         "krx_investor_flow",
         "market_universe_history"
