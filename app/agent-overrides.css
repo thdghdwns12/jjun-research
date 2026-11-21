@@ -1,0 +1,18 @@
+.confirm {
+  border-left: 3px solid #5a8cf0;
+  color: #52647d;
+  font-size: 12px;
+  margin: 18px 0 0;
+  padding: 10px 0 10px 12px;
+}
+
+.confirm span {
+  color: #2f6fed;
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.confirm + .reject {
+  margin-top: 10px;
+}

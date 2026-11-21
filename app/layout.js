@@ -1,8 +1,9 @@
 import './globals.css';
+import './agent-overrides.css';
 
 export const metadata = {
-    title: '쭌 | AI 리서치 어시스턴트',
-    description: '매일 시황 · 리포트 · 기업분석을 한 곳에서',
+    title: 'HONGHAE RESEARCH | JJun Terminal',
+    description: '수급·수출·공시·실적을 교차검증하는 멀티 에이전트 리서치 데스크',
 };
 
 export default function RootLayout({ children }) {

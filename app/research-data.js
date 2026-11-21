@@ -1,69 +1,165 @@
 import latest from '../data/latest.json';
 
 const number = (value, digits = 1) => value == null ? '-' : Number(value).toLocaleString('ko-KR', { minimumFractionDigits: digits, maximumFractionDigits: digits });
-const signed = value => value == null ? '-' : `${Number(value) >= 0 ? '+' : ''}${number(value)}%`;
-const reportNames = { cio: 'cio', supply: 'supply', industry: 'industry', market: 'market_highs', disclosures: 'news_disclosure', company: 'company_analysis', ideas: 'stock_ideas' };
+const signed = value => value == null ? '-' : (Number(value) >= 0 ? '+' : '') + number(value) + '%';
 const reportByName = Object.fromEntries((latest.agents || []).map(item => [item.agent, item]));
 const indicatorByName = Object.fromEntries((latest.indicators || []).map(item => [item.indicator, item]));
+const missing = new Set(latest.cio?.missing_data || []);
+
+const topIdeas = (latest.ideas || []).slice(0, 5);
+const topNames = topIdeas.slice(0, 3).map(item => item.company).filter(Boolean);
+const flowRows = latest.investor_flows || [];
+const exportRows = latest.export_signals || [];
 
 export const brief = {
   asOf: String(latest.as_of || '-').replaceAll('-', '.'),
-  summary: latest.cio?.summary || '오늘의 최종 판단을 준비 중입니다.',
-  opportunity: latest.ideas?.[0] ? `${latest.ideas[0].company} 우선 검증` : '후보 탐색 중',
-  risk: latest.cio?.missing_data?.includes('krx_investor_flow') ? '세부 투자주체 수급 공백' : '시장 변동성',
-  next: '공시 원문 + 수급 교차검증',
+  summary: missing.has('krx_investor_flow')
+    ? '종목 후보는 잡혔습니다. 다만 오늘의 핵심 질문인 “누가 샀는가”가 확인되기 전에는 확신 단계로 올리지 않습니다.'
+    : (latest.cio?.summary || '오늘의 최종 판단을 준비 중입니다.'),
+  verdict: missing.has('krx_investor_flow') ? '수급 연결 전' : latest.cio?.status === 'pass' ? '교차검증 통과' : '보강 중',
+  opportunity: topNames.length ? topNames.join(' · ') : '후보 탐색 중',
+  risk: missing.has('krx_investor_flow') ? '수급 주체 공백' : '가격·실적 엇박자',
+  next: missing.has('krx_investor_flow') ? '고정 IP 연결 → 키움 수급 수집' : '상위 후보 원문 검증',
 };
 
-export const picks = (latest.ideas || []).slice(0, 3).map(item => ({
+export const picks = topIdeas.slice(0, 3).map(item => ({
   company: item.company,
-  price: item.close == null ? '-' : `${number(item.close, 0)}원`,
+  price: item.close == null ? '-' : number(item.close, 0) + '원',
   return20: signed(item.return_20d_pct),
-  pbr: item.price_to_book == null ? '-' : `${number(item.price_to_book, 2)}배`,
+  pbr: item.price_to_book == null ? '-' : number(item.price_to_book, 2) + '배',
   volatility: signed(item.volatility_20d_pct).replace('+', ''),
   grade: String(item.research_priority || 'C').slice(0, 1),
   priority: String(item.research_priority || '화면 신호').replace(/^[A-C]\s*-\s*/, ''),
   why: item.why_now || '후보 신호를 확인 중입니다.',
+  confirm: item.investable_if || '공시·수급·가격이 같은 방향인지 확인',
   reject: item.first_rejection || item.kill_conditions || '핵심 근거가 사라질 때',
 }));
 
 export const market = [
-  { key: 'VIXCLS', label: 'VIX', note: '경계 구간' }, { key: 'DEXKOUS', label: '원/달러', note: 'KRW / USD' },
-  { key: 'DGS10', label: '미국 10년', note: '밸류에이션 부담', suffix: '%' }, { key: 'WTI', label: 'WTI', note: '원가 압력 관찰', prefix: '$' },
-].map(item => ({ ...item, value: `${item.prefix || ''}${number(indicatorByName[item.key]?.value, 2)}${item.suffix || ''}` }));
+  { key: 'VIXCLS', label: 'VIX', note: '위험 선호' },
+  { key: 'DEXKOUS', label: '원/달러', note: '외국인 환경' },
+  { key: 'DGS10', label: '미국 10년', note: '할인율', suffix: '%' },
+  { key: 'WTI', label: 'WTI', note: '원가 압력', prefix: '$' },
+].map(item => ({ ...item, value: (item.prefix || '') + number(indicatorByName[item.key]?.value, 2) + (item.suffix || '') }));
 
+const reportFor = name => reportByName[name] || {};
 const agentBase = [
-  { slug: 'cio', icon: '◎', name: 'CIO', role: '최종 판단·검증', status: 'partial', headline: '수급 공백 때문에 신규매수 판단을 보류했습니다.' },
-  { slug: 'supply', icon: '↕', name: '수급', role: '투자주체 흐름', status: 'failed', headline: '세부 투자주체 원본이 필요합니다.' },
-  { slug: 'industry', icon: '◇', name: '산업', role: '수출·원자재·금리', status: 'partial', headline: '거시 환경은 확인, 수출·운임·DRAM은 보강 중입니다.' },
-  { slug: 'market', icon: '⌁', name: '시장·신고가', role: '가격·추세 탐색', status: 'pass', headline: '17개 지수·종목의 52주 고점 근접도를 확인했습니다.' },
-  { slug: 'disclosures', icon: '▤', name: '공시·뉴스', role: '이벤트 탐지', status: 'pass', headline: '관심종목 공시·뉴스 70건을 분류했습니다.' },
-  { slug: 'company', icon: '▦', name: '기업분석', role: '실적·밸류에이션', status: 'pass', headline: '12개 기업의 공식 시세와 DART 재무를 결합했습니다.' },
-  { slug: 'ideas', icon: '✦', name: '아이디어', role: '후보 선별', status: 'partial', headline: '관찰 후보 5개를 선별했고 상위 3개를 우선 배치했습니다.' },
-];
-export const agents = agentBase.map(agent => {
-  const report = reportByName[reportNames[agent.slug]];
-  return report ? { ...agent, status: report.status, headline: report.summary } : agent;
-});
-
-export const disclosures = (latest.disclosures || []).slice(0, 4).map(item => ({ company: item.corp_name, title: String(item.report_name || '').trim(), date: String(item.received_date || '').slice(4, 6) + '.' + String(item.received_date || '').slice(6, 8) }));
-
-export const dataRequests = [
-  { level: 'urgent', badge: '사용자 입력 필요', title: 'TRASS 수출 품목통계', reason: '반도체·화장품 업종의 실제 수출 방향을 확인하는 데 필요합니다.', action: '회원 접근 또는 HS코드 통계 파일 요청 예정' },
-  { level: 'urgent', badge: '사용자 입력 필요', title: 'KRX 세부 투자주체 수급', reason: '외국인·연기금·투신 등 주체별 매매를 확인해야 후보를 최종 판단할 수 있습니다.', action: '로그인 접근 또는 내려받은 CSV 필요' },
-  { level: 'auto', badge: '자동 보강 중', title: '전 종목 20일 이력', reason: '전 시장 스크리닝을 위해 매일 데이터를 누적하고 있습니다.', action: '별도 조치 없음' },
+  { slug: 'cio', icon: '◎', name: 'CIO DESK', role: '최종 판단·우선순위', report: 'cio' },
+  { slug: 'supply', icon: '↕', name: 'FLOW DESK', role: '수급원별 집중 종목', report: 'supply' },
+  { slug: 'industry', icon: '◇', name: 'EXPORT DESK', role: '반도체·전자 수출판', report: 'industry' },
+  { slug: 'market', icon: '⌁', name: 'MARKET DESK', role: '가격·신고가·거래대금', report: 'market_highs' },
+  { slug: 'disclosures', icon: '▤', name: 'CATALYST DESK', role: '공시·이벤트 변화', report: 'news_disclosure' },
+  { slug: 'company', icon: '▦', name: 'FUNDAMENTAL DESK', role: '실적·밸류에이션', report: 'company_analysis' },
+  { slug: 'ideas', icon: '✦', name: 'IDEA DESK', role: '교차검증 후보 선별', report: 'stock_ideas' },
 ];
 
-export const agentDetails = {
-  cio: { conclusion: '신규매수 보류. 상위 후보는 유지하되 수급 확인 전 확신 단계로 올리지 않습니다.', why: ['셀트리온은 가격·실적 신호가 같은 방향입니다.', 'VIX 25.46과 미국 10년물 5.10%는 위험자산에 부담입니다.', '수급 에이전트 실패가 최종 판단의 핵심 차단 조건입니다.'], next: '상위 3개 후보의 공시 원문과 투자주체 수급을 교차검증', risk: '부분 데이터로 후보를 추천으로 오해하는 것', sources: ['KRX 공식 종가', 'OpenDART 공시·재무', 'FRED 거시지표', 'Yahoo 보조 시계열'] },
-  supply: { conclusion: '판단 불가. 데이터가 없는데 의견을 만들어내지 않도록 차단했습니다.', why: ['금융투자·보험·투신·사모·은행·연기금·개인·외국인 흐름이 필요합니다.', '현재 KRX Open API 키만으로는 이 세부 화면이 제공되지 않습니다.', '원본이 들어오면 5·20일 누적, 방향 전환, 가격과의 괴리를 계산합니다.'], next: 'KRX 투자자별 거래실적 CSV 또는 허용된 로그인 접근 연결', risk: '전체 외국인 수치만으로 세부 주체의 의도를 추정하는 것', sources: ['KRX 정보데이터시스템 [12009] 예정'] },
-  industry: { conclusion: '거시 환경은 경계. 업종 결론은 수출·운임·메모리 가격 보강 전까지 부분 판단입니다.', why: ['VIX 25.46으로 변동성 경계 구간입니다.', '미국 10년 금리 5.10%로 성장주 할인율 부담이 큽니다.', 'WTI 89.62달러로 운송·화학 원가 민감도를 지켜봐야 합니다.'], next: 'TRASS 반도체·화장품 HS코드 수출과 DRAM 현물가 연결', risk: '지연된 원자재 수치로 당일 업종 방향을 단정하는 것', sources: ['FRED', 'EIA/DataHub 미러', 'TRASS 예정', 'DRAMeXchange 예정'] },
-  market: { conclusion: '감시 종목 중 셀트리온이 52주 고점에 가장 가깝고, 지수 환경은 추격 매수에 불리합니다.', why: ['셀트리온은 52주 고점 대비 약 -9.4%입니다.', '17개 지수·종목의 최신 종가를 확인했습니다.', '관심종목 다수의 20·60일 수익률이 아직 음수입니다.'], next: '전 종목 이력 누적 후 신고가·모멘텀 후보를 시장 전체로 확대', risk: '보조 시세를 공식 체결가로 오인하는 것', sources: ['Yahoo Finance 보조 시계열', 'KRX 공식 종가 교차검증'] },
-  disclosures: { conclusion: '카카오 대량보유 보고와 POSCO홀딩스 해명을 우선 읽어야 합니다.', why: ['관심종목 공시·뉴스 70건을 확인했습니다.', '제목 기반 분류이므로 원문 해석은 아직 남아 있습니다.', '공급계약·최대주주 등 중요 키워드를 별도 표시합니다.'], next: '상위 후보 관련 공시 본문을 읽고 실적·지배구조 영향 분류', risk: '기사 제목만으로 호재·악재를 확정하는 것', sources: ['OpenDART', 'Google News RSS'] },
-  company: { conclusion: '12개 관심기업의 공식 가격과 DART 재무를 결합했습니다. 셀트리온이 현재 우선 검토 대상입니다.', why: ['KRX 공식 종가 12건을 교차검증했습니다.', 'DART 주요 재무계정 72건을 결합했습니다.', '밸류에이션은 가능한 공식 계정만 사용하고 없는 값은 비워뒀습니다.'], next: '셀트리온·카카오 공시 원문 기반 이익의 질과 밸류에이션 심층 검토', risk: '중간 실적을 무리하게 연환산하거나 빈 값을 추정하는 것', sources: ['KRX Open API', 'OpenDART 주요계정 API'] },
-  ideas: { conclusion: '리서치 순서는 셀트리온 → 카카오 → SK하이닉스입니다. 매수 추천은 아닙니다.', why: ['셀트리온은 20·60일 상승과 이익 개선이 함께 확인됐습니다.', '카카오는 단기 반등과 공시 집중이 잡혔지만 중기 추세는 약합니다.', 'SK하이닉스는 이익 신호와 달리 가격 변동성이 89%로 높습니다.'], next: '각 후보의 반대 근거부터 확인하고 통과한 종목만 심층 리서치', risk: '스크리닝 점수를 목표가격이나 기대수익률로 해석하는 것', sources: ['KRX 공식 시세', 'OpenDART', '뉴스·가격 시그널 결합'] },
+const fallbackHeadline = {
+  cio: '오늘 볼 것과 버릴 것을 정합니다.',
+  supply: '외국인·연기금·투신 등 수급원별 집중을 찾습니다.',
+  industry: 'DRAM·NAND·기판·MLCC·장비 수출을 분리해 봅니다.',
+  market: '가격이 아니라 변화율과 거래대금의 조합을 봅니다.',
+  disclosures: '공시를 호재·악재가 아닌 이익 영향으로 분류합니다.',
+  company: '실적의 방향과 가격에 반영된 기대를 비교합니다.',
+  ideas: 'WHY NOW·CONFIRM·KILL이 있는 후보만 올립니다.',
 };
 
-Object.entries(reportNames).forEach(([slug, reportName]) => {
-  const report = reportByName[reportName];
-  if (report?.summary && agentDetails[slug]) agentDetails[slug].conclusion = report.summary;
+export const agents = agentBase.map(agent => {
+  const report = reportFor(agent.report);
+  return {
+    ...agent,
+    status: report.status || 'failed',
+    headline: report.summary || fallbackHeadline[agent.slug],
+  };
 });
+
+export const disclosures = (latest.disclosures || []).slice(0, 5).map(item => ({
+  company: item.corp_name,
+  title: String(item.report_name || '').trim(),
+  date: String(item.received_date || '').slice(4, 6) + '.' + String(item.received_date || '').slice(6, 8),
+}));
+
+export const dataRequests = [
+  missing.has('krx_investor_flow') && {
+    level: 'urgent', badge: '내일 이어서', title: '키움 고정 IP 연결',
+    reason: 'App Key 등록은 끝났습니다. 무료 서버의 고정 IP만 연결하면 외국인·연기금·투신 등 전 수급원이 매일 자동 집계됩니다.',
+    action: 'Oracle 가입 재시도 → 서버 IP를 키움에 1회 등록',
+  },
+  (missing.has('semiconductor_exports') || exportRows.length === 0) && {
+    level: 'urgent', badge: '파일 1회 필요', title: 'TRASS 품목통계',
+    reason: 'DRAM/HBM·NAND·기판·MLCC·장비·부품·웨이퍼를 각각 월별 금액·중량·단가로 분리합니다.',
+    action: 'TRASS에서 CSV 또는 XLSX 내려받아 전달',
+  },
+  missing.has('market_universe_history') && {
+    level: 'auto', badge: '자동 누적', title: '전 종목 20일 이력',
+    reason: '시장 전체에서 신규 수급·신고가 후보를 찾기 위한 가격 이력을 매일 쌓고 있습니다.',
+    action: '사용자 조치 없음',
+  },
+].filter(Boolean);
+
+const flowWhy = flowRows.length
+  ? flowRows.slice(0, 5).map(row => (row.name || row.stock_code) + ' · ' + signed(row.net_1d_market_cap_pct) + ' · ' + number(row.net_1d_krw_mn, 0) + '백만원')
+  : ['키움 App Key·Secret 등록 완료', '투자주체별 순위 계산 코드 완료', '고정 IP 실행기 연결만 남음'];
+
+const exportWhy = exportRows.length
+  ? exportRows.slice(0, 6).map(row => (row.label || row.basket) + ' · $' + number(Number(row.export_value_usd || 0) / 1000000, 0) + 'm')
+  : ['DRAM/HBM·NAND·기판·MLCC 분류표 준비 완료', '장비·부품·웨이퍼까지 별도 바스켓 구성', 'TRASS 원본이 들어오면 금액·중량·단가를 동시에 계산'];
+
+const ideaWhy = topIdeas.slice(0, 3).map(item => item.company + ' · ' + (item.why_now || '추가 검증 중'));
+const disclosureWhy = disclosures.slice(0, 4).map(item => item.company + ' · ' + item.title);
+const marketWhy = market.map(item => item.label + ' ' + item.value + ' · ' + item.note);
+
+export const agentDetails = {
+  cio: {
+    conclusion: brief.summary,
+    why: [
+      topNames.length ? '우선 검증: ' + topNames.join(' → ') : '조건 통과 후보를 탐색 중',
+      '기회: ' + brief.opportunity,
+      '가장 큰 판단 공백: ' + brief.risk,
+    ],
+    next: brief.next,
+    risk: '점수나 뉴스 개수를 추천으로 오해하지 않습니다.',
+    sources: ['상세 출처는 데이터 검증 로그에만 보관'],
+  },
+  supply: {
+    conclusion: flowRows.length ? '수급원별 시가총액 대비 순매수 상위 종목을 집계했습니다.' : '키는 준비됐고 고정 IP 연결만 남았습니다. 연결 전에는 수급 의견을 만들지 않습니다.',
+    why: flowWhy,
+    next: flowRows.length ? '1·5·20일 동행 여부와 업종 군집 확인' : '무료 서버 생성 후 공개 IP를 키움에 등록',
+    risk: '순매수 금액만 보면 대형주가 과대평가되므로 시가총액 대비 비율을 우선합니다.',
+    sources: ['키움 ka10066 장마감후 투자자별 매매'],
+  },
+  industry: {
+    conclusion: exportRows.length ? '품목별 수출 금액과 단가 변화를 분리했습니다.' : '거시는 읽히지만 업종 판단의 핵심인 품목별 수출 원본이 아직 없습니다.',
+    why: exportWhy,
+    next: exportRows.length ? '전월·전년 대비 금액/중량/단가 분해' : 'TRASS 품목통계 CSV/XLSX 1회 전달',
+    risk: '반도체 전체 합계 하나로 DRAM·NAND·기판·MLCC를 같은 사이클로 보지 않습니다.',
+    sources: ['TRASS 품목통계', 'FRED', 'EIA'],
+  },
+  market: {
+    conclusion: '추격 여부보다 위험 환경과 가격 확인 조건을 먼저 봅니다.',
+    why: marketWhy,
+    next: '전 종목 20일 이력 누적 후 신고가·거래대금 동시 돌파 탐색',
+    risk: '52주 고점 근접만으로 매수 신호를 만들지 않습니다.',
+    sources: ['KRX 공식 종가', 'Yahoo 보조 시계열'],
+  },
+  disclosures: {
+    conclusion: disclosures.length ? '오늘 원문을 먼저 읽을 공시를 추렸습니다.' : '당일 확인된 주요 공시가 없습니다.',
+    why: disclosureWhy.length ? disclosureWhy : ['공시 원문 수집 대기'],
+    next: '상위 후보 공시의 매출·이익·지배구조 영향을 분리',
+    risk: '제목만 보고 호재·악재를 확정하지 않습니다.',
+    sources: ['OpenDART', 'Google News RSS'],
+  },
+  company: {
+    conclusion: topIdeas.length ? '가격·DART 재무·공시를 묶어 검증 순서를 정했습니다.' : '기업별 교차검증을 준비 중입니다.',
+    why: ideaWhy.length ? ideaWhy : ['기업별 데이터 결합 대기'],
+    next: '상위 후보의 기대 반영 수준과 실적 훼손 조건 확인',
+    risk: '중간 실적을 임의 연환산하거나 빈 밸류에이션을 추정하지 않습니다.',
+    sources: ['KRX', 'OpenDART'],
+  },
+  ideas: {
+    conclusion: topNames.length ? '오늘의 리서치 순서는 ' + topNames.join(' → ') + '입니다.' : '조건을 통과한 후보가 없습니다.',
+    why: ideaWhy.length ? ideaWhy : ['후보 생성 대기'],
+    next: '각 후보의 CONFIRM 조건과 KILL 조건을 먼저 검증',
+    risk: '리서치 순위를 매수 등급으로 사용하지 않습니다.',
+    sources: ['수급·공시·실적·가격 교차검증'],
+  },
+};
