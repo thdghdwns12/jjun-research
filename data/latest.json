@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-22T22:38:12.570891+00:00",
+  "generated_at": "2026-11-22T23:04:22.963674+00:00",
   "as_of": "2026-11-22",
   "cio": {
     "status": "partial",
@@ -109,6 +109,109 @@
       "kill_conditions": "가격 모멘텀 반전 또는 다음 공식 실적에서 이익 개선 근거 소멸",
       "latest_disclosure": "자기주식취득결과보고서",
       "latest_disclosure_date": "20261120"
+    }
+  ],
+  "market_candidates": [
+    {
+      "company": "한진칼우",
+      "stock_code": "18064K",
+      "market": "KOSPI",
+      "date": "20261120",
+      "close": 99700.0,
+      "return_5d_pct": -10.9821,
+      "return_20d_pct": 267.2192,
+      "trade_value": 43491792800.0,
+      "average_trade_value_5d": 49789641230,
+      "market_cap": 52870610900.0,
+      "liquidity_grade": "B",
+      "security_note": "우선주·종류주",
+      "why_now": "20일 +267.2% · 5일 평균 거래대금 +498억원",
+      "first_rejection": "20일 수익률이 0% 아래로 꺾이거나 5일 평균 거래대금이 10억원 아래로 감소하면 제외",
+      "signals": [
+        "KRX 전 종목 20일 상승",
+        "최근 거래대금 10억원 이상",
+        "우선주·종류주"
+      ]
+    },
+    {
+      "company": "한진칼",
+      "stock_code": "180640",
+      "market": "KOSPI",
+      "date": "20261120",
+      "close": 236000.0,
+      "return_5d_pct": 15.9705,
+      "return_20d_pct": 96.5029,
+      "trade_value": 134719155250.0,
+      "average_trade_value_5d": 83227359730,
+      "market_cap": 15755896900000.0,
+      "liquidity_grade": "A",
+      "security_note": null,
+      "why_now": "20일 +96.5% · 5일 평균 거래대금 +832억원",
+      "first_rejection": "20일 수익률이 0% 아래로 꺾이거나 5일 평균 거래대금이 10억원 아래로 감소하면 제외",
+      "signals": [
+        "KRX 전 종목 20일 상승",
+        "최근 거래대금 10억원 이상"
+      ]
+    },
+    {
+      "company": "진양화학",
+      "stock_code": "051630",
+      "market": "KOSPI",
+      "date": "20261120",
+      "close": 4630.0,
+      "return_5d_pct": -6.4646,
+      "return_20d_pct": 96.1864,
+      "trade_value": 3921841876.0,
+      "average_trade_value_5d": 5783162641,
+      "market_cap": 98156000000.0,
+      "liquidity_grade": "B",
+      "security_note": null,
+      "why_now": "20일 +96.2% · 5일 평균 거래대금 +58억원",
+      "first_rejection": "20일 수익률이 0% 아래로 꺾이거나 5일 평균 거래대금이 10억원 아래로 감소하면 제외",
+      "signals": [
+        "KRX 전 종목 20일 상승",
+        "최근 거래대금 10억원 이상"
+      ]
+    },
+    {
+      "company": "지슨",
+      "stock_code": "446840",
+      "market": "KOSDAQ",
+      "date": "20261120",
+      "close": 6170.0,
+      "return_5d_pct": 72.8291,
+      "return_20d_pct": 95.2532,
+      "trade_value": 20304899650.0,
+      "average_trade_value_5d": 21336290393,
+      "market_cap": 67972520720.0,
+      "liquidity_grade": "B",
+      "security_note": null,
+      "why_now": "20일 +95.3% · 5일 평균 거래대금 +213억원",
+      "first_rejection": "20일 수익률이 0% 아래로 꺾이거나 5일 평균 거래대금이 10억원 아래로 감소하면 제외",
+      "signals": [
+        "KRX 전 종목 20일 상승",
+        "최근 거래대금 10억원 이상"
+      ]
+    },
+    {
+      "company": "썸에이지",
+      "stock_code": "208640",
+      "market": "KOSDAQ",
+      "date": "20261120",
+      "close": 1276.0,
+      "return_5d_pct": 70.1333,
+      "return_20d_pct": 90.4478,
+      "trade_value": 3247317164.0,
+      "average_trade_value_5d": 2043877598,
+      "market_cap": 17767055900.0,
+      "liquidity_grade": "C",
+      "security_note": null,
+      "why_now": "20일 +90.4% · 5일 평균 거래대금 +20억원",
+      "first_rejection": "20일 수익률이 0% 아래로 꺾이거나 5일 평균 거래대금이 10억원 아래로 감소하면 제외",
+      "signals": [
+        "KRX 전 종목 20일 상승",
+        "최근 거래대금 10억원 이상"
+      ]
     }
   ],
   "indicators": [
