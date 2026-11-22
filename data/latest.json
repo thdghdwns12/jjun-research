@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-22T12:55:47.022568+00:00",
+  "generated_at": "2026-11-22T22:27:19.521637+00:00",
   "as_of": "2026-11-22",
   "cio": {
     "status": "partial",
@@ -241,13 +241,11 @@
         "필수 원본 누락 또는 에이전트 간 기준일 상충 시 최종 판단 보류"
       ],
       "action_required": [
-        "krx_investor_flow: 원본 연결 또는 내보내기 파일 필요",
-        "TRASS 품목통계 CSV/XLSX 1회 전달",
-        "krx_investor_flow: 후보 승격 전에 보강 필요",
-        "market_universe_history: 후보 승격 전에 보강 필요",
-        "TRASS 화장품 품목통계 CSV 또는 XLSX 1회 전달",
-        "TrendForce/DRAMeXchange 등 사용 허가된 DRAM 가격 내보내기 파일 또는 API 연결 필요",
+        "키움 키 준비 완료 · 무료 고정 IP 서버 생성 후 공개 IP를 키움 허용 IP에 등록",
         "TRASS 품목통계에서 DRAM/HBM·NAND/Flash·PCB/기판·MLCC CSV 또는 XLSX 1회 전달",
+        "TRASS 화장품 품목통계 CSV 또는 XLSX 1회 전달",
+        "사용자 조치 없음 · KRX 전 종목 일봉이 20거래일 쌓이면 자동 해제",
+        "TrendForce/DRAMeXchange 등 사용 허가된 DRAM 가격 내보내기 파일 또는 API 연결 필요",
         "SCFI·Freightos 등 사용 허가된 운임 내보내기 파일 또는 API 연결 필요"
       ],
       "missing_data": [
