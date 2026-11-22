@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-22T22:27:19.521637+00:00",
+  "generated_at": "2026-11-22T22:38:12.570891+00:00",
   "as_of": "2026-11-22",
   "cio": {
     "status": "partial",
@@ -9,7 +9,7 @@
       "cosmetics_exports",
       "dram_prices",
       "krx_investor_flow",
-      "market_universe_history",
+      "market_wide_fundamentals",
       "semiconductor_exports",
       "shipping_rates"
     ]
@@ -244,15 +244,15 @@
         "키움 키 준비 완료 · 무료 고정 IP 서버 생성 후 공개 IP를 키움 허용 IP에 등록",
         "TRASS 품목통계에서 DRAM/HBM·NAND/Flash·PCB/기판·MLCC CSV 또는 XLSX 1회 전달",
         "TRASS 화장품 품목통계 CSV 또는 XLSX 1회 전달",
-        "사용자 조치 없음 · KRX 전 종목 일봉이 20거래일 쌓이면 자동 해제",
         "TrendForce/DRAMeXchange 등 사용 허가된 DRAM 가격 내보내기 파일 또는 API 연결 필요",
-        "SCFI·Freightos 등 사용 허가된 운임 내보내기 파일 또는 API 연결 필요"
+        "SCFI·Freightos 등 사용 허가된 운임 내보내기 파일 또는 API 연결 필요",
+        "전 종목 재무 원본이 확보될 때까지 관심종목 분석만 유지"
       ],
       "missing_data": [
         "cosmetics_exports",
         "dram_prices",
         "krx_investor_flow",
-        "market_universe_history",
+        "market_wide_fundamentals",
         "semiconductor_exports",
         "shipping_rates"
       ]
@@ -361,7 +361,7 @@
       "agent": "stock_ideas",
       "status": "partial",
       "as_of": "2026-11-22",
-      "summary": "관심종목 후보 5개와 KRX 전 종목 20일 모멘텀 후보 0개를 선별했습니다. 매수 추천은 아닙니다.",
+      "summary": "관심종목 후보 5개와 KRX 전 종목 20일 모멘텀 후보 5개를 선별했습니다. 매수 추천은 아닙니다.",
       "verdict": "오늘의 리서치 순서는 셀트리온 → 카카오 → SK하이닉스입니다.",
       "what_changed": [
         "셀트리온 · WHY 20일 상승, 60일 상승, 최근 뉴스 8건, 영업이익 전년비 증가, DART 분기보고서 (2026.09) · KILL 20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락",
@@ -376,11 +376,11 @@
       ],
       "action_required": [
         "krx_investor_flow: 후보 승격 전에 보강 필요",
-        "market_universe_history: 후보 승격 전에 보강 필요"
+        "market_wide_fundamentals: 후보 승격 전에 보강 필요"
       ],
       "missing_data": [
         "krx_investor_flow",
-        "market_universe_history"
+        "market_wide_fundamentals"
       ]
     }
   ]
