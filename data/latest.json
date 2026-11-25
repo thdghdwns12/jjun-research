@@ -1,11 +1,12 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T05:18:09.051758+00:00",
-  "as_of": "2026-11-24",
+  "generated_at": "2026-11-25T04:12:18.094748+00:00",
+  "as_of": "2026-11-25",
   "cio": {
     "status": "partial",
     "summary": "모든 에이전트가 실행됐지만 일부 데이터가 빠져 최종 판단은 제한적입니다.",
     "missing_data": [
+      "krx_investor_flow_current_session",
       "krx_investor_flow_history",
       "market_wide_fundamentals",
       "shipping_rates"
@@ -15,16 +16,16 @@
     {
       "company": "셀트리온",
       "stock_code": "068270",
-      "close": 202000,
-      "return_20d_pct": 10.68398727465536,
-      "return_60d_pct": 7.9369183040330915,
-      "volatility_20d_pct": 45.65323416011606,
-      "distance_to_52w_high_pct": -11.795776589001395,
-      "price_to_book": 2.6844,
-      "official_change_pct": -5.16,
-      "market_cap": 46890096178000,
+      "close": 209000,
+      "return_20d_pct": 13.804004214963129,
+      "return_60d_pct": 12.911657083115525,
+      "volatility_20d_pct": 46.76227256122542,
+      "distance_to_52w_high_pct": -8.732396374727191,
+      "price_to_book": 2.7774,
+      "official_change_pct": 3.47,
+      "market_cap": 48515000501000,
       "research_priority": "A - 즉시 리서치",
-      "why_now": "20일 상승, 60일 상승, 최근 뉴스 12건, 영업이익 전년비 증가, 외국인·기관 합산 순매수, DART 분기보고서 (2026.09)",
+      "why_now": "20일 상승, 60일 상승, 최근 뉴스 21건, 영업이익 전년비 증가, DART 분기보고서 (2026.09)",
       "first_rejection": "20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락",
       "investable_if": "공시 원문에서 이익 개선의 질을 확인하고, KRX 20일 이력과 투자주체 수급이 같은 방향을 지지할 때",
       "kill_conditions": "가격 모멘텀 반전 또는 다음 공식 실적에서 이익 개선 근거 소멸",
@@ -34,16 +35,16 @@
     {
       "company": "카카오",
       "stock_code": "035720",
-      "close": 28950,
-      "return_20d_pct": 2.8813559322034,
-      "return_60d_pct": -16.50618982118295,
-      "volatility_20d_pct": 52.10234053290876,
-      "distance_to_52w_high_pct": -52.42946708463949,
-      "price_to_book": 0.8551,
-      "official_change_pct": -6.61,
-      "market_cap": 12824864764500,
+      "close": 30350,
+      "return_20d_pct": 0.8389261744966348,
+      "return_60d_pct": -16.527777777777775,
+      "volatility_20d_pct": 52.16547265181619,
+      "distance_to_52w_high_pct": -52.89968652037618,
+      "price_to_book": 0.8965,
+      "official_change_pct": 4.84,
+      "market_cap": 13445065478500,
       "research_priority": "B - 관찰",
-      "why_now": "20일 상승, 최근 뉴스 8건, 영업이익 전년비 증가, DART 소송등의제기ㆍ신청(일정금액이상의청구)",
+      "why_now": "20일 상승, 최근 뉴스 4건, 영업이익 전년비 증가, DART 소송등의제기ㆍ신청(일정금액이상의청구)",
       "first_rejection": "20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락",
       "investable_if": "공시 원문에서 이익 개선의 질을 확인하고, KRX 20일 이력과 투자주체 수급이 같은 방향을 지지할 때",
       "kill_conditions": "가격 모멘텀 반전 또는 다음 공식 실적에서 이익 개선 근거 소멸",
@@ -51,37 +52,18 @@
       "latest_disclosure_date": "20261123"
     },
     {
-      "company": "삼성전자",
-      "stock_code": "005930",
-      "close": 177500,
-      "return_20d_pct": -13.513513513513509,
-      "return_60d_pct": -26.577437858508603,
-      "volatility_20d_pct": 72.59934234940472,
-      "distance_to_52w_high_pct": -47.03448275862069,
-      "price_to_book": 1.6898,
-      "official_change_pct": -3.06,
-      "market_cap": 1037714452920000,
-      "research_priority": "B - 관찰",
-      "why_now": "최근 뉴스 80건, 영업이익 전년비 증가, 외국인·기관 합산 순매수, DART 임원ㆍ주요주주특정증권등소유상황보고서",
-      "first_rejection": "20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락",
-      "investable_if": "공시 원문에서 이익 개선의 질을 확인하고, KRX 20일 이력과 투자주체 수급이 같은 방향을 지지할 때",
-      "kill_conditions": "가격 모멘텀 반전 또는 다음 공식 실적에서 이익 개선 근거 소멸",
-      "latest_disclosure": "임원ㆍ주요주주특정증권등소유상황보고서",
-      "latest_disclosure_date": "20261118"
-    },
-    {
       "company": "한화에어로스페이스",
       "stock_code": "012450",
-      "close": 575000,
-      "return_20d_pct": -17.96875,
-      "return_60d_pct": -42.04231830726771,
-      "volatility_20d_pct": 66.88110077528614,
-      "distance_to_52w_high_pct": -59.01106050748211,
-      "price_to_book": 1.5436,
-      "official_change_pct": -4.96,
-      "market_cap": 29648955575000,
-      "research_priority": "B - 관찰",
-      "why_now": "최근 뉴스 4건, 영업이익 전년비 증가, 외국인·기관 합산 순매수, DART 자기주식취득결과보고서",
+      "close": 628000,
+      "return_20d_pct": -19.44091486658196,
+      "return_60d_pct": -44.869565217391305,
+      "volatility_20d_pct": 65.4275625542532,
+      "distance_to_52w_high_pct": -58.75081327260898,
+      "price_to_book": 1.6859,
+      "official_change_pct": 9.22,
+      "market_cap": 32381815828000,
+      "research_priority": "C - 화면 신호만",
+      "why_now": "최근 뉴스 33건, 영업이익 전년비 증가, DART 자기주식취득결과보고서",
       "first_rejection": "20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락",
       "investable_if": "공시 원문에서 이익 개선의 질을 확인하고, KRX 20일 이력과 투자주체 수급이 같은 방향을 지지할 때",
       "kill_conditions": "가격 모멘텀 반전 또는 다음 공식 실적에서 이익 개선 근거 소멸",
@@ -89,40 +71,79 @@
       "latest_disclosure_date": "20261120"
     },
     {
-      "company": "두산에너빌리티",
-      "stock_code": "034020",
-      "close": 39700,
-      "return_20d_pct": -27.589134125636672,
-      "return_60d_pct": -50.29137529137528,
-      "volatility_20d_pct": 75.54227564009123,
-      "distance_to_52w_high_pct": -68.73167155425219,
-      "price_to_book": 2.214,
-      "official_change_pct": -2.58,
-      "market_cap": 25430277496200,
-      "research_priority": "B - 관찰",
-      "why_now": "최근 뉴스 3건, 영업이익 전년비 증가, 외국인·기관 합산 순매수, DART 주식등의대량보유상황보고서(일반)",
+      "company": "S-Oil",
+      "stock_code": "010950",
+      "close": 94400,
+      "return_20d_pct": -24.840764331210185,
+      "return_60d_pct": -30.94367227505487,
+      "volatility_20d_pct": 57.00720955992029,
+      "distance_to_52w_high_pct": -44.66588511137163,
+      "price_to_book": 0.9303,
+      "official_change_pct": 1.18,
+      "market_cap": 10627815564800,
+      "research_priority": "C - 화면 신호만",
+      "why_now": "최근 뉴스 12건, 영업손익 흑자 전환, DART 대규모기업집단현황공시[분기별공시(대표회사용)]",
       "first_rejection": "20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락",
       "investable_if": "공시 원문에서 이익 개선의 질을 확인하고, KRX 20일 이력과 투자주체 수급이 같은 방향을 지지할 때",
       "kill_conditions": "가격 모멘텀 반전 또는 다음 공식 실적에서 이익 개선 근거 소멸",
-      "latest_disclosure": "주식등의대량보유상황보고서(일반)",
-      "latest_disclosure_date": "20261120"
+      "latest_disclosure": "대규모기업집단현황공시[분기별공시(대표회사용)]",
+      "latest_disclosure_date": "20261125"
+    },
+    {
+      "company": "삼성전자",
+      "stock_code": "005930",
+      "close": 189400,
+      "return_20d_pct": -28.512396694214882,
+      "return_60d_pct": -34.962406015037594,
+      "volatility_20d_pct": 66.24957705785029,
+      "distance_to_52w_high_pct": -52.275862068965516,
+      "price_to_book": 1.8031,
+      "official_change_pct": 6.7,
+      "market_cap": 1107285168355200,
+      "research_priority": "C - 화면 신호만",
+      "why_now": "최근 뉴스 33건, 영업이익 전년비 증가, DART 임원ㆍ주요주주특정증권등소유상황보고서",
+      "first_rejection": "20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락",
+      "investable_if": "공시 원문에서 이익 개선의 질을 확인하고, KRX 20일 이력과 투자주체 수급이 같은 방향을 지지할 때",
+      "kill_conditions": "가격 모멘텀 반전 또는 다음 공식 실적에서 이익 개선 근거 소멸",
+      "latest_disclosure": "임원ㆍ주요주주특정증권등소유상황보고서",
+      "latest_disclosure_date": "20261118"
     }
   ],
   "market_candidates": [
     {
+      "company": "타임X AI",
+      "stock_code": "304840",
+      "market": "KOSDAQ",
+      "date": "20261124",
+      "close": 1871.0,
+      "return_5d_pct": 233.5116,
+      "return_20d_pct": 233.5116,
+      "trade_value": 5833826248.0,
+      "average_trade_value_5d": 5662968597,
+      "market_cap": 23475511840.0,
+      "liquidity_grade": "C",
+      "security_note": null,
+      "why_now": "20일 +233.5% · 5일 평균 거래대금 +57억원",
+      "first_rejection": "20일 수익률이 0% 아래로 꺾이거나 5일 평균 거래대금이 10억원 아래로 감소하면 제외",
+      "signals": [
+        "KRX 전 종목 20일 상승",
+        "최근 거래대금 10억원 이상"
+      ]
+    },
+    {
       "company": "한진칼우",
       "stock_code": "18064K",
       "market": "KOSPI",
-      "date": "20261123",
-      "close": 82500.0,
-      "return_5d_pct": -10.3261,
-      "return_20d_pct": 214.8855,
-      "trade_value": 77304501550.0,
-      "average_trade_value_5d": 48532110970,
-      "market_cap": 43749502500.0,
+      "date": "20261124",
+      "close": 87900.0,
+      "return_5d_pct": 4.6429,
+      "return_20d_pct": 232.3251,
+      "trade_value": 38895947200.0,
+      "average_trade_value_5d": 43482228220,
+      "market_cap": 46613106300.0,
       "liquidity_grade": "C",
       "security_note": "우선주·종류주",
-      "why_now": "20일 +214.9% · 5일 평균 거래대금 +485억원",
+      "why_now": "20일 +232.3% · 5일 평균 거래대금 +435억원",
       "first_rejection": "20일 수익률이 0% 아래로 꺾이거나 5일 평균 거래대금이 10억원 아래로 감소하면 제외",
       "signals": [
         "KRX 전 종목 20일 상승",
@@ -131,39 +152,19 @@
       ]
     },
     {
-      "company": "타임X AI",
-      "stock_code": "304840",
-      "market": "KOSDAQ",
-      "date": "20261123",
-      "close": 1588.0,
-      "return_5d_pct": 183.066,
-      "return_20d_pct": 183.066,
-      "trade_value": 10957254542.0,
-      "average_trade_value_5d": 5577539771,
-      "market_cap": 19924699520.0,
-      "liquidity_grade": "C",
-      "security_note": null,
-      "why_now": "20일 +183.1% · 5일 평균 거래대금 +56억원",
-      "first_rejection": "20일 수익률이 0% 아래로 꺾이거나 5일 평균 거래대금이 10억원 아래로 감소하면 제외",
-      "signals": [
-        "KRX 전 종목 20일 상승",
-        "최근 거래대금 10억원 이상"
-      ]
-    },
-    {
       "company": "진양화학",
       "stock_code": "051630",
       "market": "KOSPI",
-      "date": "20261123",
-      "close": 4270.0,
-      "return_5d_pct": -14.7705,
-      "return_20d_pct": 91.4798,
-      "trade_value": 2957505758.0,
-      "average_trade_value_5d": 4825613735,
-      "market_cap": 90524000000.0,
+      "date": "20261124",
+      "close": 4580.0,
+      "return_5d_pct": -16.2706,
+      "return_20d_pct": 115.0235,
+      "trade_value": 3499965706.0,
+      "average_trade_value_5d": 4564740468,
+      "market_cap": 97096000000.0,
       "liquidity_grade": "B",
       "security_note": null,
-      "why_now": "20일 +91.5% · 5일 평균 거래대금 +48억원",
+      "why_now": "20일 +115.0% · 5일 평균 거래대금 +46억원",
       "first_rejection": "20일 수익률이 0% 아래로 꺾이거나 5일 평균 거래대금이 10억원 아래로 감소하면 제외",
       "signals": [
         "KRX 전 종목 20일 상승",
@@ -171,19 +172,19 @@
       ]
     },
     {
-      "company": "지슨",
-      "stock_code": "446840",
-      "market": "KOSDAQ",
-      "date": "20261123",
-      "close": 6270.0,
-      "return_5d_pct": 35.1293,
-      "return_20d_pct": 88.2883,
-      "trade_value": 18854885060.0,
-      "average_trade_value_5d": 24882342477,
-      "market_cap": 69074182320.0,
-      "liquidity_grade": "B",
+      "company": "한진칼",
+      "stock_code": "180640",
+      "market": "KOSPI",
+      "date": "20261124",
+      "close": 226500.0,
+      "return_5d_pct": 5.1044,
+      "return_20d_pct": 88.4359,
+      "trade_value": 52331697250.0,
+      "average_trade_value_5d": 79218922150,
+      "market_cap": 15121655287500.0,
+      "liquidity_grade": "A",
       "security_note": null,
-      "why_now": "20일 +88.3% · 5일 평균 거래대금 +249억원",
+      "why_now": "20일 +88.4% · 5일 평균 거래대금 +792억원",
       "first_rejection": "20일 수익률이 0% 아래로 꺾이거나 5일 평균 거래대금이 10억원 아래로 감소하면 제외",
       "signals": [
         "KRX 전 종목 20일 상승",
@@ -191,19 +192,19 @@
       ]
     },
     {
-      "company": "썸에이지",
-      "stock_code": "208640",
+      "company": "심텍홀딩스",
+      "stock_code": "036710",
       "market": "KOSDAQ",
-      "date": "20261123",
-      "close": 1251.0,
-      "return_5d_pct": 73.75,
-      "return_20d_pct": 86.4382,
-      "trade_value": 1462651821.0,
-      "average_trade_value_5d": 2289587056,
-      "market_cap": 17418955275.0,
-      "liquidity_grade": "C",
+      "date": "20261124",
+      "close": 6550.0,
+      "return_5d_pct": 22.4299,
+      "return_20d_pct": 86.8759,
+      "trade_value": 22285094265.0,
+      "average_trade_value_5d": 11820711462,
+      "market_cap": 346021788700.0,
+      "liquidity_grade": "A",
       "security_note": null,
-      "why_now": "20일 +86.4% · 5일 평균 거래대금 +23억원",
+      "why_now": "20일 +86.9% · 5일 평균 거래대금 +118억원",
       "first_rejection": "20일 수익률이 0% 아래로 꺾이거나 5일 평균 거래대금이 10억원 아래로 감소하면 제외",
       "signals": [
         "KRX 전 종목 20일 상승",
@@ -232,13 +233,13 @@
     },
     {
       "indicator": "DGS10",
-      "date": "2026-11-20",
+      "date": "2026-11-23",
       "value": 4.92,
       "unit": "%"
     },
     {
       "indicator": "DGS2",
-      "date": "2026-11-20",
+      "date": "2026-11-23",
       "value": 4.63,
       "unit": "%"
     },
@@ -256,20 +257,20 @@
     },
     {
       "indicator": "SOFR",
-      "date": "2026-11-20",
+      "date": "2026-11-23",
       "value": 3.92,
       "unit": "%"
     },
     {
       "indicator": "T10Y2Y",
-      "date": "2026-11-23",
-      "value": 0.29,
+      "date": "2026-11-24",
+      "value": 0.28,
       "unit": "%p"
     },
     {
       "indicator": "VIXCLS",
-      "date": "2026-11-20",
-      "value": 35.89,
+      "date": "2026-11-23",
+      "value": 26.62,
       "unit": "index"
     }
   ],
@@ -362,6 +363,30 @@
   ],
   "disclosures": [
     {
+      "corp_name": "NAVER",
+      "report_name": "대규모기업집단현황공시[분기별공시(대표회사용)]",
+      "received_date": "20261125",
+      "important_keyword": null
+    },
+    {
+      "corp_name": "S-Oil",
+      "report_name": "대규모기업집단현황공시[분기별공시(대표회사용)]",
+      "received_date": "20261125",
+      "important_keyword": null
+    },
+    {
+      "corp_name": "현대자동차",
+      "report_name": "자기주식처분결과보고서",
+      "received_date": "20261124",
+      "important_keyword": "자기주식"
+    },
+    {
+      "corp_name": "SK이노베이션",
+      "report_name": "[기재정정]주요사항보고서(회사합병결정)",
+      "received_date": "20261124",
+      "important_keyword": "합병"
+    },
+    {
       "corp_name": "SK하이닉스",
       "report_name": "임원ㆍ주요주주특정증권등소유상황보고서",
       "received_date": "20261123",
@@ -383,30 +408,6 @@
       "corp_name": "POSCO홀딩스",
       "report_name": "공정거래자율준수프로그램운영현황(안내공시)              ",
       "received_date": "20261123",
-      "important_keyword": null
-    },
-    {
-      "corp_name": "SK이노베이션",
-      "report_name": "[기재정정]주요사항보고서(회사합병결정)",
-      "received_date": "20261123",
-      "important_keyword": "합병"
-    },
-    {
-      "corp_name": "SK하이닉스",
-      "report_name": "[기재정정]타법인주식및출자증권취득결정              ",
-      "received_date": "20261120",
-      "important_keyword": null
-    },
-    {
-      "corp_name": "한화에어로스페이스",
-      "report_name": "자기주식취득결과보고서",
-      "received_date": "20261120",
-      "important_keyword": "자기주식"
-    },
-    {
-      "corp_name": "두산에너빌리티",
-      "report_name": "주식등의대량보유상황보고서(일반)",
-      "received_date": "20261120",
       "important_keyword": null
     }
   ],
@@ -2820,12 +2821,12 @@
       "summary": "모든 에이전트가 실행됐지만 일부 데이터가 빠져 최종 판단은 제한적입니다.",
       "verdict": "모든 에이전트가 실행됐지만 일부 데이터가 빠져 최종 판단은 제한적입니다.",
       "what_changed": [
-        "supply: 수급원별 시가총액 대비 순매수 상위를 우선 관찰합니다.",
+        "supply: KRX 2026-11-24 거래 확인, 최신 수급은 2026-11-23 기준.",
         "industry: 규격별 DRAM 현물가와 품목별 수출을 대조해 업황 판단 근거를 확인합니다.",
         "market_highs: 신고가 근접은 후보 탐색 신호일 뿐, 수급·실적 확인 전에는 추격하지 않습니다.",
         "news_disclosure: 뉴스 개수가 아니라 공시 원문에서 이익·현금흐름·지배구조 변화가 있는지 확인합니다.",
         "company_analysis: 가격·실적·밸류에이션을 한 화면에서 비교하되, 빈 값은 추정하지 않습니다.",
-        "stock_ideas: 오늘의 리서치 순서는 셀트리온 → 카카오 → 삼성전자입니다."
+        "stock_ideas: 오늘의 리서치 순서는 셀트리온 → 카카오 → 한화에어로스페이스입니다."
       ],
       "confirm": [
         "수급·공시·실적·가격이 같은 방향인 후보만 승격"
@@ -2835,10 +2836,12 @@
       ],
       "action_required": [
         "SCFI·Freightos 등 사용 허가된 운임 내보내기 파일 또는 API 연결 필요",
+        "키움 실행기의 최신 거래일 실행 기록을 확인 · 해당 거래일 원본을 확보할 때까지 최신 후보에서 수급 가점 보류",
         "키움 장 마감 수급을 거래일별로 저장 · 5·20일 누적은 해당 기간 수집이 완료되면 표시",
         "전 종목 재무 원본이 확보될 때까지 관심종목 분석만 유지"
       ],
       "missing_data": [
+        "krx_investor_flow_current_session",
         "krx_investor_flow_history",
         "market_wide_fundamentals",
         "shipping_rates"
@@ -2848,9 +2851,10 @@
       "agent": "supply",
       "status": "partial",
       "as_of": "2026-11-23",
-      "summary": "투자주체별 시가총액 대비 순매수 순위를 계산했습니다. 최근 최대 20거래일 중 수급 관측 2일. 5·20일 누적은 해당 기간 데이터가 모두 있는 종목에만 표시합니다.",
-      "verdict": "수급원별 시가총액 대비 순매수 상위를 우선 관찰합니다.",
+      "summary": "KRX 2026-11-24 거래 확인, 최신 수급은 2026-11-23 기준. 투자주체별 시가총액 대비 순매수 순위를 계산했습니다. 최근 최대 20거래일 중 수급 관측 2일. 5·20일 누적은 해당 기간 데이터가 모두 있는 종목에만 표시합니다.",
+      "verdict": "KRX 2026-11-24 거래 확인, 최신 수급은 2026-11-23 기준.",
       "what_changed": [
+        "KRX 2026-11-24 거래 확인, 최신 수급은 2026-11-23 기준.",
         "bank 1위 맥쿼리인프라 · 시총 대비 0.0399%",
         "financial_investment 1위 에스텍 · 시총 대비 1.0229%",
         "foreign 1위 마이크로컨텍솔 · 시총 대비 1.8381%",
@@ -2869,17 +2873,18 @@
       ],
       "action_required": [],
       "missing_data": [
+        "krx_investor_flow_current_session",
         "krx_investor_flow_history"
       ]
     },
     {
       "agent": "industry",
       "status": "partial",
-      "as_of": "2026-11-24",
-      "summary": "원유(DataHub EIA 미러)와 거시 지표 8개, 품목·국가별 수출 5개, DRAM 현물 7개 규격(2026-11-24)를 확인했습니다. 2026-10 전 세계 수출은 핵심 4/4품목 확인. 화장품(HS 3304) 전 세계 수출 확인.",
+      "as_of": "2026-11-25",
+      "summary": "원유(DataHub EIA 미러)와 거시 지표 8개, 품목·국가별 수출 5개, DRAM 현물 7개 규격(2026-11-25)를 확인했습니다. 2026-10 전 세계 수출은 핵심 4/4품목 확인. 화장품(HS 3304) 전 세계 수출 확인.",
       "verdict": "규격별 DRAM 현물가와 품목별 수출을 대조해 업황 판단 근거를 확인합니다.",
       "what_changed": [
-        "DRAM 현물 · DDR5 16Gb $60.833/칩 (2026-11-24) 2026-11-17 대비 +0.8% · DDR4 16Gb $78.375/칩 (2026-11-24) 2026-11-17 대비 -0.9%",
+        "DRAM 현물 · DDR5 16Gb $60.833/칩 (2026-11-25) 2026-11-18 대비 +0.6% · DDR4 16Gb $78.125/칩 (2026-11-25) 2026-11-18 대비 -1.0%",
         "2026-10 · DRAM · world · 수출 $17,959m",
         "2026-10 · 플래시 메모리(NAND/NOR) · world · 수출 $2,971m",
         "2026-10 · 화장품(HS 3304) · world · 수출 $1,155m",
@@ -2902,7 +2907,7 @@
     {
       "agent": "market_highs",
       "status": "pass",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-25",
       "summary": "17개 지수·종목의 최신 가격과 52주 신고가 근접 여부를 계산했습니다.",
       "verdict": "신고가 근접은 후보 탐색 신호일 뿐, 수급·실적 확인 전에는 추격하지 않습니다.",
       "what_changed": [],
@@ -2918,15 +2923,15 @@
     {
       "agent": "news_disclosure",
       "status": "pass",
-      "as_of": "20261123",
+      "as_of": "20261125",
       "summary": "관심종목 공시·뉴스 70건을 확인했습니다. 현재는 제목 기반 분류입니다.",
       "verdict": "뉴스 개수가 아니라 공시 원문에서 이익·현금흐름·지배구조 변화가 있는지 확인합니다.",
       "what_changed": [
-        "SK하이닉스: 임원ㆍ주요주주특정증권등소유상황보고서",
-        "카카오: 소송등의제기ㆍ신청(일정금액이상의청구)              ",
-        "POSCO홀딩스: 대규모기업집단현황공시[분기별공시(대표회사용)]",
-        "POSCO홀딩스: 공정거래자율준수프로그램운영현황(안내공시)              ",
-        "SK이노베이션: [기재정정]주요사항보고서(회사합병결정)"
+        "NAVER: 대규모기업집단현황공시[분기별공시(대표회사용)]",
+        "S-Oil: 대규모기업집단현황공시[분기별공시(대표회사용)]",
+        "현대자동차: 자기주식처분결과보고서",
+        "SK이노베이션: [기재정정]주요사항보고서(회사합병결정)",
+        "SK하이닉스: 임원ㆍ주요주주특정증권등소유상황보고서"
       ],
       "confirm": [
         "상위 후보 관련 공시 원문에서 금액·기간·상대방·실적 영향을 확인"
@@ -2940,15 +2945,15 @@
     {
       "agent": "company_analysis",
       "status": "pass",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-25",
       "summary": "관심기업 12개의 가격 지표, KRX 공식 종가 12건, DART 주요 재무계정 72건, 공식 원본 결합 밸류에이션 12건을 분석했습니다.",
       "verdict": "가격·실적·밸류에이션을 한 화면에서 비교하되, 빈 값은 추정하지 않습니다.",
       "what_changed": [
-        "SK하이닉스 · 20일 -11.7% · 52주 고점 대비 -59.4%",
-        "현대차 · 20일 -4.5% · 52주 고점 대비 -63.0%",
-        "포스코홀딩스 · 20일 -7.4% · 52주 고점 대비 -52.2%",
-        "삼성전자 · 20일 -13.5% · 52주 고점 대비 -47.0%",
-        "S-Oil · 20일 -24.9% · 52주 고점 대비 -44.4%"
+        "SK하이닉스 · 20일 -28.7% · 52주 고점 대비 -63.7%",
+        "현대차 · 20일 -8.6% · 52주 고점 대비 -63.9%",
+        "포스코홀딩스 · 20일 -10.3% · 52주 고점 대비 -52.7%",
+        "삼성전자 · 20일 -28.5% · 52주 고점 대비 -52.3%",
+        "S-Oil · 20일 -24.8% · 52주 고점 대비 -44.7%"
       ],
       "confirm": [
         "실적 개선이 일회성인지 본업 성장인지 공시 원문에서 확인"
@@ -2962,13 +2967,13 @@
     {
       "agent": "stock_ideas",
       "status": "partial",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-25",
       "summary": "관심종목 후보 5개와 KRX 전 종목 20일 모멘텀 후보 5개를 선별했습니다. 매수 추천은 아닙니다.",
-      "verdict": "오늘의 리서치 순서는 셀트리온 → 카카오 → 삼성전자입니다.",
+      "verdict": "오늘의 리서치 순서는 셀트리온 → 카카오 → 한화에어로스페이스입니다.",
       "what_changed": [
-        "셀트리온 · WHY 20일 상승, 60일 상승, 최근 뉴스 12건, 영업이익 전년비 증가, 외국인·기관 합산 순매수, DART 분기보고서 (2026.09) · KILL 20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락",
-        "카카오 · WHY 20일 상승, 최근 뉴스 8건, 영업이익 전년비 증가, DART 소송등의제기ㆍ신청(일정금액이상의청구) · KILL 20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락",
-        "삼성전자 · WHY 최근 뉴스 80건, 영업이익 전년비 증가, 외국인·기관 합산 순매수, DART 임원ㆍ주요주주특정증권등소유상황보고서 · KILL 20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락"
+        "셀트리온 · WHY 20일 상승, 60일 상승, 최근 뉴스 21건, 영업이익 전년비 증가, DART 분기보고서 (2026.09) · KILL 20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락",
+        "카카오 · WHY 20일 상승, 최근 뉴스 4건, 영업이익 전년비 증가, DART 소송등의제기ㆍ신청(일정금액이상의청구) · KILL 20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락",
+        "한화에어로스페이스 · WHY 최근 뉴스 33건, 영업이익 전년비 증가, DART 자기주식취득결과보고서 · KILL 20일 연환산 변동성이 40% 이상이라 진입 가격·손절 기준 없이는 탈락"
       ],
       "confirm": [
         "수급·공시·실적·가격 중 최소 세 가지가 같은 방향인지 확인"
@@ -2977,9 +2982,11 @@
         "뉴스 건수나 단기 상승률만으로 후보를 승격하지 않음"
       ],
       "action_required": [
+        "krx_investor_flow_current_session: 후보 승격 전에 보강 필요",
         "market_wide_fundamentals: 후보 승격 전에 보강 필요"
       ],
       "missing_data": [
+        "krx_investor_flow_current_session",
         "market_wide_fundamentals"
       ]
     }
